@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "title": "Intro to JavaScript",
+    "description": "Learn the basics of JavaScript programming.",
+    "featured": true,
+    "lessons": [
+      "JavaScript uses variables to store data. You can declare variables using let, const, or var.",
+      "Functions allow you to reuse code. Use function declarations or arrow functions.",
+      "Events help you respond to user actions like clicks and keypresses."
+    ],
+    "quiz": [
+      {
+        "question": "Which keyword is used to declare a constant variable?",
+        "options": ["var", "let", "const"],
+        "answer": "const"
+      },
+      {
+        "question": "What type is this value: \"Hello World\"?",
+        "options": ["number", "string", "boolean"],
+        "answer": "string"
+      }
+    ]
+
+  },
+  {
+    "id": 2,
+    "title": "Web Design Fundamentals",
+    "description": "Explore HTML, CSS, and responsive design.",
+    "featured": true,
+    "lessons": [
+      "HTML structures your content using tags like <div>, <h1>, and <p>.",
+      "CSS styles your content with properties like color, margin, and font-size.",
+      "Responsive design uses media queries to adapt layout to different screen sizes."
+    ],
+    "quiz": [
+      {
+        "question": "Which tag is used for the largest heading?",
+        "options": ["<h1>", "<h3>", "<p>"],
+        "answer": "<h1>"
+      },
+      {
+        "question": "Which CSS property changes text color?",
+        "options": ["font-size", "color", "margin"],
+        "answer": "color"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Python for Beginners",
+    "description": "Start coding with Python and build simple apps.",
+    "featured": true,
+    "lessons": [
+      "Python uses indentation to define blocks of code.",
+      "Variables are dynamically typed and declared without keywords.",
+      "Use print() to display output in Python."
+    ],
+    "quiz": [
+      {
+        "question": "Which function displays output in Python?",
+        "options": ["echo()", "print()", "display()"],
+        "answer": "print()"
+      },
+      {
+        "question": "How do you define a function in Python?",
+        "options": ["function myFunc()", "def myFunc():", "func myFunc()"],
+        "answer": "def myFunc():"
+      }
+    ]
+  }
+]
+

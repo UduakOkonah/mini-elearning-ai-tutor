@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI E-Learning Platform</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>AI E-Learning</h1>
+    </div>
+
+    <nav class="sidebar">
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="course.html?courseId=1">Courses</a></li>
+      </ul>
+    </nav>
+    <button id="logout-btn">Logout</button>
+    <button class="menu-toggle">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <span class="visually-hidden">Toggle menu</span>
+    </button>
+  </header>
+
+  <section class="hero">
+      <h2 id="welcome-user">Welcome!</h2>
+      <p>Explore interactive courses, take quizzes, and get personalized study tips from our Gemini-powered AI Tutor. Whether you're just starting or sharpening your skills, this platform is built to guide your journey.</p>
+      <a href="#course-list" class="cta-button">Start Learning</a>
+    </section>
+
+    <main>
+      <section class="course-dashboard">
+        <h2>Featured Courses</h2>
+        <p class="dashboard-description">
+          This Dashboard Page displays a list of available courses with titles, short descriptions, and progress indicators to help you track your learning journey.
+        </p>
+        <div id="course-list" class="course-grid"></div>
+      </section>
+
+      <section class="learning-tips">
+        <h2>Learning Tips</h2>
+        <ul>
+          <li>📚 Break lessons into small chunks and review regularly.</li>
+          <li>🧠 Use the AI Tutor to clarify confusing topics or get encouragement.</li>
+          <li>📝 Take notes during lessons to reinforce memory.</li>
+          <li>🎯 Set weekly goals and track your progress.</li>
+          <li>🔁 Revisit quizzes to improve retention and mastery.</li>
+        </ul>
+      </section>
+    </main>
+
+
+  <footer>
+    <p>&copy; 2025 AI E-Learning Platform | Built by Uduakobong Lawrence Okonah</p>
+    <div class="footer-links">
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

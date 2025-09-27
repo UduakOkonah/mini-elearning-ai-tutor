@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Detail</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="course-title">Loading Course...</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="course.html?courseId=1">Courses</a></li>
+      </ul>
+    </nav>
+    <button id="logout-btn">Logout</button>
+  </header>
+
+    <button id="enroll-btn">Enroll in Course</button>
+  <p id="enroll-status"></p>
+
+  <main>
+    <section class="course-content">
+      <h2>Lessons</h2>
+      <div id="lessons"></div>
+    </section>
+
+    <section class="quiz-section">
+      <h2>Quiz</h2>
+      <form id="quiz-form">
+      <!-- Quiz questions will be injected here by script.js -->
+      <button type="submit">Submit Quiz</button>
+      </form>
+      <div id="quiz-result"></div>
+      <button id="retake-quiz-btn">Retake Quiz</button>
+      <button id="review-tips-btn">Get Review Tips</button>
+    </section>
+
+    <section class="ai-tutor">
+      <h2>Gemini AI Tutor</h2>
+      <div id="chat-box"></div>
+      <input type="text" id="user-input" placeholder="Ask a question..." />
+      <button class="AI" onclick="sendToGemini()">Send</button>
+      <button id="gemini-suggest-btn">Gemini Suggests</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AI E-Learning Platform | Built by Uduakobong Lawrence Okonah</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
