@@ -1,74 +1,52 @@
-# Mini E-Learning Platform with Gemini-Simulated AI Tutor
+# AI E-Learning Platform
 
-## 👨‍💻 Project Overview
-This web application is a mini e-learning platform designed to help users explore interactive courses, take short quizzes, and receive personalized study tips from a simulated AI Tutor named Gemini. Built using HTML, CSS, and JavaScript, the platform demonstrates core web development skills and introduces simulated AI integration for a modern learning experience.
+## Overview
+This project is a fully interactive web-based learning platform built for the CSE310 Module #1: Web Apps. It allows users to sign up, log in, enroll in courses, complete lessons, take quizzes, and interact with a simulated AI tutor named Gemini. The platform is built using HTML, CSS, and JavaScript, and stores user progress using localStorage.
 
-## 🚀 Features
+## Features
+- Combined Sign Up / Login system with username, email, and password
+- Personalized dashboard with featured courses and progress tracking
+- Course pages with structured lessons and interactive quizzes
+- Instant quiz feedback and score saving
+- Gemini AI Tutor chatbot with hints, encouragement, and review tips
+- Course enrollment system with access control
+- Logout button and session management
+- Responsive design and clean UI styling
 
-- **Dashboard Page**  
-  Displays a list of featured courses with:
-  - Titles and short descriptions
-  - Progress indicators (ready for future tracking)
-  - A hero section welcoming users and guiding them to start learning
-  - Sidebar navigation with links to Home, My Courses, Profile, and Help
-  - Learning Tips section offering study strategies and motivation
-
-- **Course Detail Page**  
-  Loads course content dynamically from `courses.json`, including:
-  - Multiple lessons formatted for clarity
-  - A quiz section with instant feedback
-  - A Gemini AI Tutor chatbox for personalized support
-
-- **Quiz System**  
-  - Multiple-choice questions with scoring logic
-  - Saves user scores using localStorage
-  - “Review Tips” button triggers Gemini to give targeted advice
-
-- **Gemini AI Tutor**  
-  - Responds to user questions based on keywords
-  - Offers encouragement and study tips
-  - Adapts responses based on quiz performance
-
-- **Responsive Design**  
-  - Styled with CSS and Font Awesome icons
-  - Mobile-friendly layout with sidebar toggle
-
-## 🛠️ Technologies Used
+## Technologies Used
 - HTML5
 - CSS3
 - JavaScript (ES6)
-- LocalStorage API
+- LocalStorage (for session and progress tracking)
 
-## 📦 Setup Instructions
-1. Clone the repository:
+## Setup Instructions
+1. Clone the repository from GitHub:
    ```bash
-   git clone https://github.com/your-username/e-learning-platform.git
+   git clone https://github.com/UduakOkonah/mini-elearning-ai-tutor.gite-learning-platform.git
 
- 
-2. Open the project folder in VS Code.
-3. Launch index.html using Live Server or any     local server.
-4. Click on a course to view lessons, take the quiz, and interact with Gemini.
-📚 Course Data
-Courses are stored in courses.json and loaded dynamically. Each course includes:
-- Title and description
-- Array of lessons
-- Array of quiz questions with correct answers
-🧠 AI Tutor Simulation
-Gemini is a simulated AI tutor that:
-- Answers keyword-based questions
-- Responds based on quiz score
-- Offers encouragement and review tips
-- Can be expanded to integrate real AI APIs in future versions
-📈 Future Improvements
-- User registration and login
-- Real-time Gemini API integration
-- Progress dashboard with visual analytics
-- Course completion certificates
-- Admin panel for adding/editing courses
-🎥 Demo Video
-Watch the full walkthrough here: Microsoft Teams Link
-👤 Author
+2.  Open the project folder in VS Code.
+3. Right-click index.html and select Open with Live Server.
+4. Navigate to auth.html to sign up or log in.
+5. Explore the dashboard and enroll in available courses.
+
+How to Use
+- Start at auth.html to create an account or log in.
+- Once logged in, you'll be redirected to index.html (Dashboard).
+- Click on any course to view lessons and take quizzes.
+- Use the Gemini AI Tutor to ask questions or get review tips.
+- Your progress and scores are saved automatically.
+
+Video Demo
+Watch the full demo with code walkthrough and explanation:
+https://youtu.be/your-demo-video
+
+Author
 Uduakobong Lawrence Okonah
-CSE 310 – Applied Programming
-Module #1: Web Apps
-Date: 27/09/2025
+CSE310 – Applied Programming
+BYU–Pathway Worldwide
+Term 5 – 2025
+License
+This project is open-source and available under the MIT License.
+
+---
+

@@ -12,6 +12,27 @@ if (!username) {
   }
 }
 
+// menue
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("main-menu");
+
+  if (menuToggle && menu) {
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  }
+
+  const logoutBtn = document.getElementById("logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("ai_user");
+      window.location.href = "auth.html";
+    });
+  }
+});
+
+
 // logout button
 document.getElementById("logout-btn").addEventListener("click", () => {
   localStorage.removeItem("ai_user");
@@ -25,7 +46,7 @@ if (window.location.pathname.includes("index.html")) {
     .then((courses) => {
       const courseList = document.getElementById("course-list");
       const featuredCourses = courses.filter(course => course.featured);
-      
+
       featuredCourses.forEach((course) => {
         const score = localStorage.getItem(`course_${course.id}_score`);
         const progress = score ? (parseInt(score) / course.quiz.length) * 100 : 0;

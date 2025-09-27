@@ -66,19 +66,35 @@ nav a.active {
 }
 
 
-/* Hamburger Button */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1100;
-  position: absolute;
-  right: 20px;
-  top: 30px;
-  color: #4CAF50;
+/* Default (large screens) */
+#main-menu {
+  display: block; /* show nav by default on large screens */
 }
+
+#menu-toggle {
+  display: none; /* hide hamburger on large screens */
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  #main-menu {
+    display: none; /* hide nav by default */
+  }
+
+  #main-menu.active {
+    display: block; /* show nav when toggled */
+  }
+
+  #menu-toggle {
+    display: block; /* show hamburger */
+  }
+
+  nav ul {
+    flex-direction: column; /* stack links */
+    gap: 10px;
+  }
+}
+
 
 .hero {
   background-color: #2980b9;

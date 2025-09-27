@@ -5,18 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Course Detail</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+</head>
   <header>
-    <h1 id="course-title">Loading Course...</h1>
-    <nav>
+    <div class="logo">
+      <h1>AI E-Learning</h1>
+    </div>
+
+    <nav id="main-menu" class="hidden">
       <ul>
         <li><a href="index.html">Dashboard</a></li>
         <li><a href="course.html?courseId=1">Courses</a></li>
+        <button id="logout-btn">Logout</button>
       </ul>
     </nav>
-    <button id="logout-btn">Logout</button>
+    <button id="menu-toggle">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <span class="visually-hidden">Toggle menu</span>
+    </button>
   </header>
+
+  <h1 id="course-title">Loading Course...</h1>
 
     <button id="enroll-btn">Enroll in Course</button>
   <p id="enroll-status"></p>
