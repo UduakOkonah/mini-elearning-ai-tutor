@@ -261,3 +261,53 @@ function sendToGemini() {
   chatBox.innerHTML += `<p><strong>Gemini:</strong> ${reply}</p>`;
   document.getElementById("user-input").value = "";
 }
+
+// profile
+function loadProfilePage() {
+  const username = localStorage.getItem("ai_user");
+  if (!username) {
+    window.location.href = "auth.html";
+    return;
+  }
+
+  const users = JSON.parse(localStorage.getItem("ai_users") || "[]");
+  const userData = users.find(u => u.username === username);
+  const userEmail = userData?.email;
+
+  const userInfo = document.getElementById("user-info");
+  if (userInfo && userData) {
+    userInfo.innerHTML = `
+      <p><strong>Username:</strong> ${userData.username}</p>
+      <p><strong>Email:</strong> ${userData.email}</p>
+    `;
+  }
+
+  fetch("courses.json")
+    .then(res => res.json())
+    .then(courses => {
+      const enrolledCourses = courses.filter(course =>
+        localStorage.getItem(`enrolled_${userEmail}_course_${course.id}`)
+      );
+
+      const enrolledDiv = document.getElementById("enrolled-courses");
+      if (enrolledCourses.length === 0) {
+        enrolledDiv.innerHTML = "<p>You haven't enrolled in any courses yet.</p>";
+      } else {
+        enrolledCourses.forEach(course => {
+          const div = document.createElement("div");
+          div.className = "course-card";
+          div.innerHTML = `
+            <h3>${course.title}</h3>
+            <p>${course.description}</p>
+            <a href="course.html?courseId=${course.id}">Go to Course</a>
+          `;
+          enrolledDiv.appendChild(div);
+        });
+      }
+    });
+}
+
+// Run only on profile page
+if (window.location.pathname.includes("profile.html")) {
+  loadProfilePage();
+}
